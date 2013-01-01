@@ -7,7 +7,7 @@ set :rails_env, "production"
 set :domain, "chan@chan.delta-zet.com"
 set :deploy_to, "/home/chan/#{application}"
 set :use_sudo, false
-set :repository,  "git@github.com:Delta-Zet/delta-chan.git"
+set :repository,  "git://github.com/Delta-Zet/delta-chan.git"
 
 set :default_environment, {
   'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
