@@ -5,4 +5,6 @@ class Topic < ActiveRecord::Base
 
   validates :message, :title, :presence => true
   validates :section_id, :numericality => { :only_integer => true }
+
+  default_scope order('created_at DESC')
 end
