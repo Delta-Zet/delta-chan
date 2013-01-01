@@ -1,0 +1,12 @@
+<h1>Изменить раздел <%= @section.title %></h1>
+
+<%= form_for @section, url: admin_section_path(@section), method: :put, html: {class: "form-horizontal"} do |f| %>
+
+  <%= render 'form', section: @section, f: f %>
+
+  <div class="control-group">
+    <div class="controls">
+      <%= f.submit "Изменить", class: "btn" %>
+    </div>
+  </div>
+<% end %>

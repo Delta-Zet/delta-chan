@@ -1,0 +1,12 @@
+<h1>Добавить раздел</h1>
+
+<%= form_for @section, url: admin_sections_path, html: {class: "form-horizontal"} do |f| %>
+
+  <%= render 'form', section: @section, f: f %>
+
+  <div class="control-group">
+    <div class="controls">
+      <%= f.submit "Создать", class: "btn" %>
+    </div>
+  </div>
+<% end %>

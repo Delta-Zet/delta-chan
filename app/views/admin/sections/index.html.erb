@@ -1,0 +1,25 @@
+<h1>Список разделов</h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>URL (slug)</th>
+      <th>Заголовок</th>
+      <th>Действие</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @sections.each do |section| %>
+      <tr>
+        <td><%= section.slug %></td>
+        <td><%= section.title %></td>
+        <td>
+          <%= link_to "Редактировать", edit_admin_section_path(section), class: "btn btn-warning" %>
+          <%= link_to "Удалить", admin_section_path(section), method: :delete, class: "btn btn-danger" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "Создать", new_admin_section_path, class: "btn" %>
