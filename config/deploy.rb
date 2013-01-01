@@ -4,7 +4,7 @@ rails_env = ENV['RAILS_ENV'] || 'production'
 
 set :application, "delta-chan"
 set :rails_env, "production"
-set :domain, "web@chan.delta-zet.com"
+set :domain, "chan@chan.delta-zet.com"
 set :deploy_to, "/home/chan/#{application}"
 set :use_sudo, false
 set :repository,  "git@github.com:Delta-Zet/delta-chan.git"
