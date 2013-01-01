@@ -1,0 +1,15 @@
+---
+chdir: /home/chan/delta-chan/current
+environment: production
+timeout: 30
+log: /home/chan/logs/site.log
+pid: /home/chan/delta-chan/shared/thin.pid
+max_conns: 1024
+max_persistent_conns: 100
+require: []
+wait: 30
+socket: /home/chan/delta-chan/shared/thin.sock
+daemonize: true
+user: chan
+group: chan
+servers: 4
