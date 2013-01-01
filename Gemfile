@@ -28,6 +28,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'sqlite3' # hmm, idk for that is...
 end
 
 gem 'thin'
