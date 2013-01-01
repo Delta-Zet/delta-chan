@@ -12,4 +12,4 @@ socket: /home/chan/delta-chan/shared/thin.sock
 daemonize: true
 user: chan
 group: chan
-servers: 4
+servers: 2
