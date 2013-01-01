@@ -9,5 +9,10 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require twitter/bootstrap
  *= require_tree .
  */
+
+body {
+  padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
