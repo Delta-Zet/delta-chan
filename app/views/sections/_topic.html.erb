@@ -3,7 +3,7 @@
     Author: <strong><%= topic.author %></strong>, Title: <strong><%= topic.title %></strong>
   </div>
   <% if topic.image.exists? %>
-    <div class="span3 image"><%= image_tag topic.image.url(:thumb) %></div>
+    <div class="span3 image"><%= link_to image_tag(topic.image.url(:thumb)), topic.image.url %></div>
     <div class="span8 message"><%= topic.message %></div>
   <% else %>
     <div class="span12 message"><%= topic.message %></div>
