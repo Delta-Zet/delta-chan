@@ -21,6 +21,9 @@
       <div class="nav-collapse collapse">
         <ul class="nav">
           <li><%= link_to "Главная", root_path %></li>
+          <% sections.each do |section| %>
+            <li><%= link_to section.slug, "/#{section.slug}" %></li>
+          <% end %>
         </ul>
       </div><!--/.nav-collapse -->
     </div>

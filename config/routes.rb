@@ -1,4 +1,5 @@
 DeltaChan::Application.routes.draw do
+  resources :sections, path: '', only: [:show]
 
   namespace :admin do
     root to: "dashboard#index"
