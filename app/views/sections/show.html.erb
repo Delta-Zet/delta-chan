@@ -1,2 +1,12 @@
-<h1><%= @section.title %></h1>
-<p><%= @section.description %></p>
+<div class="row">
+  <h1><%= @section.title %></h1>
+  <p><%= @section.description %></p>
+</div>
+
+<div class="row">
+  <%= render 'new_topic' %>
+</div>
+
+<% @topics.each do |topic| %>
+  <%= render 'topic', topic: topic %>
+<% end %>

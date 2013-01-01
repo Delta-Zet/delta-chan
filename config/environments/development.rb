@@ -1,4 +1,6 @@
 DeltaChan::Application.configure do
+  Paperclip.options[:command_path] = "/usr/local/bin/" #for Mac OS X only
+
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on

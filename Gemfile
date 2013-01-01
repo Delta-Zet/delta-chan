@@ -41,3 +41,5 @@ gem 'anjlab-bootstrap-rails', '>= 2.2', :require => 'bootstrap-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'crudify'
+
+gem 'paperclip'

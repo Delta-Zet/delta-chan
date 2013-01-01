@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130101165418) do
+ActiveRecord::Schema.define(:version => 20130101182116) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "email"
@@ -27,6 +27,19 @@ ActiveRecord::Schema.define(:version => 20130101165418) do
     t.string   "position"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "topics", :force => true do |t|
+    t.string   "author"
+    t.string   "title"
+    t.text     "message"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.integer  "section_id"
   end
 
 end

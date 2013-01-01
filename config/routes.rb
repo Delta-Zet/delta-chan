@@ -9,6 +9,8 @@ DeltaChan::Application.routes.draw do
 
   root to: "main#index"
 
-  resources :sections, path: '', only: [:show]
+  resources :sections, path: '', only: [:show] do
+    resources :topics, only: [:show, :create]
+  end
 
 end

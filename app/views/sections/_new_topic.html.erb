@@ -1,0 +1,41 @@
+<%= form_for @topic, url: section_topics_path(@topic.section.slug), html: {class: "form-horizontal", multipart: true} do |f| %>
+  <%= f.hidden_field :section_id %>
+
+  <% @topic.errors.full_messages.each do |msg| %>
+    <div class="alert alert-error"><%= msg %></span></div>
+  <% end %>
+
+  <fieldset>
+    <legend>Создать тред</legend>
+
+    <div class="row">
+      <div class="span4">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: "message-input" %>
+      </div>
+
+      <div class="span4">
+        <%= f.label :author %>
+        <%= f.text_field :author, class: "message-input" %>
+      </div>
+
+      <div class="span4">
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span12">
+        <%= f.label :message %>
+        <%= f.text_area :message, rows: "5", class: "message-textarea" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span12">
+        <%= f.submit "Создать", class: "btn" %>
+      </div>
+    </div>
+  </fieldset>
+<% end %>
