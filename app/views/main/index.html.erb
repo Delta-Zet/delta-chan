@@ -4,4 +4,6 @@
 
 <% @topics.each do |topic| %>
   <%= render 'sections/topic', topic: topic, reply: false %>
+  <%= link_to "Ссылка", section_topic_path(topic.section, topic) %>
+  <hr/>
 <% end %>
