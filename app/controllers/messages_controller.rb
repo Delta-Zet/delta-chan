@@ -1,5 +1,3 @@
-require 'addressable/uri'
-
 class MessagesController < ApplicationController
   def create
     @message = Message.new(params[:message])
