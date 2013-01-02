@@ -3,7 +3,11 @@ class TopicsController < ApplicationController
   def create
     @topic = Topic.new(params[:topic])
     unless params[:image_url].empty?
-      @topic.image = URI.parse(params[:image_url])
+      begin
+        @topic.image = URI.parse(params[:image_url])
+      rescue URI::InvalidURIError
+        flash[:notice] = "Invalid URI for image :("
+      end
     end
     if @topic.save
       flash[:notice] = "Topic created"
