@@ -3,5 +3,5 @@
 <h2>Свежие треды</h2>
 
 <% @topics.each do |topic| %>
-  <%= render 'sections/topic', topic: topic %>
+  <%= render 'sections/topic', topic: topic, reply: false %>
 <% end %>
