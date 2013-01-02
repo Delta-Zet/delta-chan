@@ -4,9 +4,9 @@ class TopicsController < ApplicationController
     @topic = Topic.new(params[:topic])
     unless params[:image_url].empty?
       begin
-        @topic.image = URI.parse(params[:image_url])
-      rescue URI::InvalidURIError
-        flash[:notice] = "Invalid URI for image :("
+        @topic.image = URI.parse(URI.encode(params[:image_url]))
+      rescue
+        flash[:notice] = "Loading image from url failed!"
       end
     end
     if @topic.save

@@ -1,11 +1,13 @@
+require 'addressable/uri'
+
 class MessagesController < ApplicationController
   def create
     @message = Message.new(params[:message])
     unless params[:image_url].empty?
       begin
-        @message.image = URI.parse(params[:image_url])
-      rescue URI::InvalidURIError
-        flash[:notice] = "Invalid URI for image :("
+        @message.image = URI.parse(URI.encode(params[:image_url]))
+      rescue
+        flash[:notice] = "Loading image from url failed!"
       end
     end
     if @message.save
