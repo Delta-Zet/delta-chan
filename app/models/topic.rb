@@ -1,5 +1,6 @@
 class Topic < ActiveRecord::Base
   belongs_to :section
+  has_many :messages
   attr_accessible :author, :message, :title, :image, :section_id
   has_attached_file :image, :styles => { :thumb => "200x200>" }
 

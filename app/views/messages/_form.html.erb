@@ -1,0 +1,37 @@
+<%= form_for message, html: {class: "form-horizontal", multipart: true} do |f| %>
+  <%= f.hidden_field :topic_id %>
+
+  <% message.errors.full_messages.each do |msg| %>
+    <div class="alert alert-error"><%= msg %></span></div>
+  <% end %>
+
+  <fieldset>
+    <legend>Написать в тред</legend>
+
+    <div class="row">
+
+      <div class="span4">
+        <%= f.label :author %>
+        <%= f.text_field :author, class: "message-input" %>
+      </div>
+
+      <div class="span4">
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span12">
+        <%= f.label :message %>
+        <%= f.text_area :message, rows: "5", class: "message-textarea" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span12">
+        <%= f.submit "Написать", class: "btn" %>
+      </div>
+    </div>
+  </fieldset>
+<% end %>

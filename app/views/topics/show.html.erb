@@ -1,3 +1,9 @@
 <h1>Просмотр <%= @topic.title %></h1>
 
-<%= render 'sections/topic', topic: @topic %>
+<%= render 'messages/form', message: @message %>
+
+<%= render 'sections/topic', topic: @topic, reply: false %>
+
+<% @topic.messages.each do |message| %>
+  <%= render 'message', message: message %>
+<% end %>

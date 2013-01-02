@@ -7,3 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 AdminUser.create(email: 'admin@example.com', password: 'secret')
+Section.create(description: 'test section', position: 0, slug: 'test', title: 'some test')
