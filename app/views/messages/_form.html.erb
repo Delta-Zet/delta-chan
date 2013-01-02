@@ -19,6 +19,11 @@
         <%= f.label :image %>
         <%= f.file_field :image %>
       </div>
+
+      <div class="span4">
+        <%= f.label :image_url %>
+        <%= text_field_tag :image_url, params[:image_url] %>
+      </div>
     </div>
 
     <div class="row">

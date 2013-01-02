@@ -27,6 +27,13 @@
 
     <div class="row">
       <div class="span12">
+        <%= f.label :image_url %>
+        <%= text_field_tag :image_url, params[:image_url], class: "input-xxlarge" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="span12">
         <%= f.label :message %>
         <%= f.text_area :message, rows: "5", class: "message-textarea" %>
       </div>

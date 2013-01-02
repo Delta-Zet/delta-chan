@@ -2,6 +2,9 @@ class TopicsController < ApplicationController
 
   def create
     @topic = Topic.new(params[:topic])
+    if params[:image_url]
+      @topic.image = URI.parse(params[:image_url])
+    end
     if @topic.save
       flash[:notice] = "Topic created"
       redirect_to "/#{@topic.section.slug}"
