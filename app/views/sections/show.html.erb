@@ -9,4 +9,12 @@
 
 <% @topics.each do |topic| %>
   <%= render 'topic', topic: topic, reply: true %>
+  <% if topic.messages.count > 3 %>
+    <div class="row">
+      <div class="span12"><i>Чтобы посмотреть еще <%= topic.messages.count-3 %> комментариев, нажмите "Ответить"</i></div>
+    </div>
+  <% end %>
+  <% topic.messages.last(3).each do |message| %>
+    <%= render 'message', message: message %>
+  <% end %>
 <% end %>

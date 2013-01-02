@@ -1,0 +1,11 @@
+<div class="row message offset1">
+  <div class="message-caption span10">
+    Author: <strong><%= message.author %></strong>, <strong>№ <%= message.id %></strong>
+  </div>
+  <% if message.image.exists? %>
+    <div class="span3 image"><%= link_to image_tag(message.image.url(:thumb)), message.image.url %></div>
+    <div class="span7 message"><%= message.message %></div>
+  <% else %>
+    <div class="span10 message"><%= message.message %></div>
+  <% end %>
+</div>

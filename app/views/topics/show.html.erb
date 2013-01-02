@@ -1,6 +1,6 @@
-<h1>Просмотр <%= @topic.title %></h1>
+<div class="row"><h1>Просмотр <%= @topic.title %></h1></div>
 
-<%= render 'messages/form', message: @message %>
+<div class="row"><%= render 'messages/form', message: @message %></div>
 
 <%= render 'sections/topic', topic: @topic, reply: false %>
 
