@@ -9,6 +9,6 @@
     <div class="span12 message"><%= topic.message %></div>
   <% end %>
   <div class="topic-footer span12">
-    <%= link_to "Ответить", "#" %>
+    <%= link_to "Ответить", section_topic_path(topic.section.slug, topic) %>
   </div>
 </div>
