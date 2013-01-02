@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
   def create
     @message = Message.new(params[:message])
-    if params[:image_url]
+    unless params[:image_url].empty?
       @message.image = URI.parse(params[:image_url])
     end
     if @message.save

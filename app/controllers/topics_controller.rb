@@ -2,7 +2,7 @@ class TopicsController < ApplicationController
 
   def create
     @topic = Topic.new(params[:topic])
-    if params[:image_url]
+    unless params[:image_url].empty?
       @topic.image = URI.parse(params[:image_url])
     end
     if @topic.save
