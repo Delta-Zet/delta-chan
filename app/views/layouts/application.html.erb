@@ -31,8 +31,22 @@
 </div>
 
 <div class="container">
-  <% if notice %><p class="alert alert-info"><%= notice %></p><% end %>
-  <% if alert %><p class="alert"><%= alert %></p><% end %>
+  <% if notice %>
+    <script>
+      $(document).ready(function() {
+        setTimeout(function() { $(".alert-info").hide('slow') }, 3000)
+      })
+    </script>
+    <p class="alert alert-info"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <script>
+      $(document).ready(function() {
+        setTimeout(function() { $(".alert-alert").hide('slow') }, 3000)
+      })
+    </script>
+    <p class="alert alert-alert"><%= alert %></p>
+  <% end %>
 
   <%= yield %>
 
