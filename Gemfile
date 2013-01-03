@@ -43,3 +43,6 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'crudify'
 
 gem 'paperclip'
+
+# Auto-linking links :)
+gem 'rails_autolink'
